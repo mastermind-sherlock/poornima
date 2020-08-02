@@ -1,0 +1,15 @@
+<div style="color:red;font-size:14px;text-align: center;padding:20px;">
+    <button (click)="counter()">Count</button>
+
+
+</div>
+<div style="color: rgb(83, 247, 198);font-size: 18px;text-align: center;" [style.background-color]="count>3?'rgb(20, 197, 220)':'rgba(220, 20, 177, 0.733)'">
+{{count}} number of times I am clicked
+</div>
+
+<ng-template [ngIf]="count>3" [ngIfElse]="second"> 
+Welcome to first template
+</ng-template>
+<ng-template #second>
+counter is less than three So I am at second template
+</ng-template>
